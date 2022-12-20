@@ -40,9 +40,9 @@ futures = { version = "^0.3.17", default-features = false, features = [
     "cfg-target-has-atomic",
     "unstable",
 ] }
-byte-slice-cast = { version = "^1.2.0", default-features = false }
 
 serde = { version = "^1.0.151", default-features = false, features = ["alloc"] }
+byte-slice-cast = { version = "^1.2.0", default-features = false }
 
 embedded-hal = "^1.0.0-alpha.9"
 embedded-hal-async = "^0.2.0-alpha.0"
