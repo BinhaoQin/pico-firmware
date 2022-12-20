@@ -1,6 +1,10 @@
 #![no_std]
 #![no_main]
 #![feature(type_alias_impl_trait)]
+#![feature(alloc_error_handler)]
+
+mod heap;
+use heap::*;
 
 use defmt::*;
 use embassy_executor::Executor;
@@ -25,6 +29,8 @@ enum LedState {
 
 #[cortex_m_rt::entry]
 fn main() -> ! {
+    initialize_heap();
+
     let p = embassy_rp::init(Default::default());
     let led = Output::new(p.PIN_25, Level::Low);
 

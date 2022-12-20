@@ -33,6 +33,7 @@ defmt-rtt = "^0.4"
 
 cortex-m = { version = "^0.7.6" }
 cortex-m-rt = "^0.7.0"
+alloc-cortex-m = "^0.4.3"
 panic-probe = { version = "^0.3", features = ["print-defmt"] }
 futures = { version = "^0.3.17", default-features = false, features = [
     "async-await",
@@ -41,6 +42,7 @@ futures = { version = "^0.3.17", default-features = false, features = [
 ] }
 byte-slice-cast = { version = "^1.2.0", default-features = false }
 
+serde = { version = "^1.0.151", default-features = false, features = ["alloc"] }
 
 embedded-hal = "^1.0.0-alpha.9"
 embedded-hal-async = "^0.2.0-alpha.0"
